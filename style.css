@@ -1,0 +1,11 @@
+#block{
+  min-height: 100px;
+  color: #fff;
+  background: #666;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.row2{
+  min-height: 100px; 
+}
