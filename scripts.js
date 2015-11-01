@@ -5,6 +5,19 @@ $(document).ready(function(){
   var setCellSize = function(rows, cols){
     $(".cell").width(width/cols);
     $(".cell").height(height/rows);
+
+    $("#q2dm1").width(width);
+    $("#q2dm1").height(height);
+  };
+
+  var setCellFunctions = function(){
+    $('.cell').mouseenter(function(){
+      $(this).addClass('color');
+    });
+
+    $('.cell').click(function(){
+      $(this).removeClass('color');
+    });
   };
 
   var createCells = function(rows, cols){
@@ -23,6 +36,7 @@ $(document).ready(function(){
     });
 
     setCellSize(rows, cols);
+    setCellFunctions();
   }
 
   createCells(32,32);
