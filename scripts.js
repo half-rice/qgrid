@@ -1,16 +1,29 @@
 $(document).ready(function(){
+  var width = 960;
+  var height = width;
 
-  // 4x4 grid
-  for(var i=0; i<4; i++){
-    console.log("creating row...");
-    $("#canvas").append('<div class="row rowgrid" id=""></div>');
+  var setCellSize = function(rows, cols){
+    $(".cell").width(width/cols);
+    $(".cell").height(height/rows);
   };
 
-  $(".rowgrid").each(function(){
-    for(var i=0; i<4; i++){
-      console.log("creating block...");
-      $(this).append('<div class="block col-xs-3"></div>');
-    }
-  });
+  var createCells = function(rows, cols){
+    $("#canvas").append('<div id="q2dm1"></div>');
 
+    for(var i=0; i<rows; i++){
+      console.log("appending row div to q2dm1...");
+      $("#q2dm1").append('<div class="row"></div>');
+    };
+
+    $(".row").each(function(){
+      for(var i=0; i<cols; i++){
+        console.log("appending cell to row...");
+        $(this).append('<div class="cell"></div>');
+      }
+    });
+
+    setCellSize(rows, cols);
+  }
+
+  createCells(32,32);
 });

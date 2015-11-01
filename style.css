@@ -1,15 +1,35 @@
-.block{
-  min-height: 200px;
+.cell{
+  display: inline;
+  float: left;
+  /*border: solid 1px red;*/
   color: #fff;
-  background: #666;
-  border-style: solid;
-  border-width: 1px;
+  background-color: #666;
+  width: 30px;
+  height: 30px;
 }
 
-.block:hover{
+.wtf{
+  display: inline;
+  float: left;
+  border: solid 1px #00ff00;
+  width: 30px;
+  height: 30px;
+}
+
+.cell:hover{
   background-color: #00ff00;
 }
 
-.rowgrid{
-  min-height: 100px; 
+.row{
+  /*border: solid 1px black;*/
+  margin: 0 auto;
+}
+
+#canvas{
+  margin: 0 auto;
+}
+
+#q2dm1{
+  margin: 0 auto;
+  border: solid 1px #333;
 }
